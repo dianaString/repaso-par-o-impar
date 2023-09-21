@@ -1,6 +1,6 @@
 
 // VARIABLES
-const inputNumer = document.querySelector('.js-inputNumer');
+const inputNumber = document.querySelector('.js-inputNumber');
 const inputParImpar = document.querySelector('.js-inputParImpar');
 const text = document.querySelector('.js-text');
 const p = document.querySelector('.js-p');
@@ -20,7 +20,7 @@ function parImpar(valueInput) { // le metemos a valueInput entre paréntesis par
 
 // Copia texto del input en etiqueta p
 function handleInput() {
-    const newP = inputNumer.value;
+    const newP = inputNumber.value;
     text.innerHTML = newP; 
     /* p1.innerHTML = input.value; */ // + corto - descriptivo
 }
@@ -28,13 +28,13 @@ function handleInput() {
 // Muestra si el nº es par o impar
 function handleClick() {
     /* event.preventDefault(); */
-    const valueInput = inputNumer.value;
+    const valueInput = inputNumber.value;
     console.log(valueInput);
     parImpar(valueInput);   // le metemos a valueInput entre paréntesis para que no sea undefined
 }
 
 // EVENTS/LISTENERS
-inputNumer.addEventListener('input', handleInput); // copiar texto
+inputNumber.addEventListener('input', handleInput); // copiar texto
 inputParImpar.addEventListener('click', handleClick); // es par o impar?
 
 
